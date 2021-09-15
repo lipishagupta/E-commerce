@@ -1,0 +1,390 @@
+body{
+    overflow-x: hidden;
+}
+.d-flex{
+    position: absolute;
+    left: 38%;
+    width: 40%;
+  
+}
+
+.search{
+    border-top-right-radius: 12px ;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px ;
+    border-bottom-left-radius: 12px;
+    width: 80%;
+    height: 150%;
+    font-family: "Livvic";
+    text-decoration: none;
+    border: 3px solid #322c4d ;
+    outline: none;
+}
+.btn1{
+    position: absolute;
+    left: 85%;
+    top: -10%;
+    height: 38.2px;
+    width: 40.2px;
+    border-style: none;
+    background-image: url("main/search.png");
+    border-top-right-radius: 12px ;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px ;
+    border-bottom-left-radius: 12px;
+    background-size:38px;
+    background-color: white;
+    
+  
+}
+
+.new-nav{
+    position: absolute;
+    left: 31%;
+    top: 12px;
+    color: #ffffff;
+}
+
+.logo{
+   position: absolute;
+    right: 82%;
+    top: -40%;
+}
+
+.logo h1{
+    font-family: "Livvic";
+    color: #322c4d;
+    font-weight: bolder;
+    position: absolute;
+    left: 80%;
+    top:30%;
+    font-size: 30px;
+}
+
+.bg-height{
+    height: 90px;
+}
+
+.second{
+    background-size: cover;
+}
+
+.button{
+    width: 90%;
+    position: absolute;
+    left: 18%;
+}
+
+.laptop{
+    width: 140px;
+    height:240px;    
+}
+
+.watch{
+    
+    width: 140px;
+    height:240px;
+       
+}
+
+.tv{
+    width: 140px;
+    height:240px;
+}
+
+.phone{
+    width: 140px;
+    height:240px;
+}
+
+.camera{
+    width: 140px;
+    height:240px;
+}
+
+.desk{
+    width: 140px;
+    height:240px;
+}
+
+
+.d1{
+    position: absolute;
+    top: 10%;
+    left: 1%;
+    
+}
+
+.d2{
+    position: absolute;
+    left: 1400%;
+    top: 10%;
+}
+
+.d3{
+  position: absolute;
+  left: 2750%;
+  top: 10%;
+}
+
+.one{
+    position: absolute;
+    left: 76%;
+    top: 150%;
+   
+}
+
+.two{
+    position: absolute;
+    left: 4%;
+    top: 150%;
+}
+
+.three{
+    position: absolute;
+    left: 28%;
+    top: 150%;
+}
+.four{
+    position: absolute;
+    left: 52%;
+    top: 150%;
+}
+
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
+.carousel-control { 
+    width: 8%;
+    width: 0px;
+}
+.carousel-control.left,
+.carousel-control.right { 
+    margin-right: 40px;
+    margin-left: 32px; 
+    background-image: none;
+    opacity: 1;
+}
+.carousel-control > a > span {
+    color: white;
+	  font-size: 29px !important;
+}
+
+.carousel-col { 
+    position: relative; 
+    min-height: 1px; 
+    padding: 5px; 
+    float: left;
+ }
+
+ .active > div { display:none; }
+ .active > div:first-child { display:block; }
+
+/*xs*/
+@media (max-width: 767px) {
+  .carousel-inner .active.left { left: -50%; }
+  .carousel-inner .active.right { left: 50%; }
+	.carousel-inner .next        { left:  50%; }
+	.carousel-inner .prev		     { left: -50%; }
+  .carousel-col                { width: 50%; }
+	.active > div:first-child + div { display:block; }
+}
+
+/*sm*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .carousel-inner .active.left { left: -50%; }
+  .carousel-inner .active.right { left: 50%; }
+	.carousel-inner .next        { left:  50%; }
+	.carousel-inner .prev		     { left: -50%; }
+  .carousel-col                { width: 50%; }
+	.active > div:first-child + div { display:block; }
+}
+
+/*md*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .carousel-inner .active.left { left: -33%; }
+  .carousel-inner .active.right { left: 33%; }
+	.carousel-inner .next        { left:  33%; }
+	.carousel-inner .prev		     { left: -33%; }
+  .carousel-col                { width: 33%; }
+	.active > div:first-child + div { display:block; }
+  .active > div:first-child + div + div { display:block; }
+}
+
+/*lg*/
+@media (min-width: 1200px) {
+  .carousel-inner .active.left { left: -25%; }
+  .carousel-inner .active.right{ left:  25%; }
+	.carousel-inner .next        { left:  25%; }
+	.carousel-inner .prev		     { left: -25%; }
+  .carousel-col                { width: 25%; }
+	.active > div:first-child + div { display:block; }
+  .active > div:first-child + div + div { display:block; }
+	.active > div:first-child + div + div + div { display:block; }
+}
+
+.block {
+	width: 306px;
+	height: 230px;
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: -webkit-pictograph;
+
+}
+
+main{
+    width: 100%;
+    height: 840px;
+    margin: 10px auto;
+    position: absolute;
+    padding: 5px 0;
+    top: 200%;
+}
+
+main .text{
+    padding: 10px;
+    text-align: center;
+    color: #554;
+}
+.text h1{
+    font-size: 50px;
+}
+
+.text p{
+    width: 60%;
+    padding: 5px;
+    margin: auto;
+    line-height: 30px;
+}
+
+main header{
+    width: 98%;
+    height: 60px;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    border-bottom: 2px solid #ddd;
+}
+
+header p span{
+    font-size: 40px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #555;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+header p span:hover{
+    background: #222;
+    color: white;
+}
+
+section{
+    width: 98%;
+    height: 550px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+section::-webkit-scrollbar{
+    display: none;
+}
+
+section .product{
+    min-width: 24%;
+    height: 90%;
+    background: whitesmoke;
+    margin: 0 20px 0 0;
+    border-radius: 20px;
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+}
+
+picture{
+    width: 100%;
+    height: 70%;
+    padding: 20px;
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+picture img{
+    width: 100%;
+}
+
+.detail, .button{
+    width: 90%;
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    font-size: 20px;
+    color: #444;
+}
+
+small{
+    color: #555;
+}
+a{
+    text-decoration: none;
+    padding: 6px 14px;
+    font-size: 15px;
+    margin: 5px 0 0 20px;
+    display: inline-block;
+    background: #090c2e;
+    border-radius: 12px;
+    color: white;
+}
+
+p.star{
+    margin: 5px auto;
+    width: 65%;
+    font-size: 25px;
+    color: #ff9900;
+}
+@media(max-width: 768px){
+    .text h1{
+        font-size: 35px;
+    }
+    .text p{
+        width: 90%;
+    }
+    header h1{
+        font-size: 25px
+    }
+    header p span{
+        font-size: 30px;
+    }
+    section .product{
+        min-width: 49%;
+        margin: 0 10px 0 0;
+    }
+    .detail, .button{
+        font-size: 16px;
+    }
+    a{
+        padding: 6px 10px;
+    }
+}
+
