@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Products</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 550;
+        }
+
+        .card:hover {
+            cursor: pointer;
+            box-shadow: 5px 10px 18px #888888;
+            transform: scale(1.05);
+            transition: 500ms;
+        }
+
+        #filters {
+            background-color: white;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+
+        }
+
+        #d1,
+        #d2 {
+            background-color: #6a3668;
+            width: fit-content;
+            padding: 6%;
+            float: left;
+            border-radius: 10px;
+            margin: 3px;
+            color: white;
+        }
+
+        #d3 {
+            background-color: #6a3668;
+            width: fit-content;
+            padding: 6%;
+            float: left;
+            border-radius: 10px;
+            color: white;
+        }
+
+        #p1,
+        #p2,
+        #p3,
+        #p4,
+        #p5 {
+            float: left;
+            display: block;
+            padding: 1.5%;
+            cursor: pointer;
+            border-collapse: collapse;
+            width: 20%;
+            text-align: center;
+            background-color: #6a3668;
+            border-bottom: 5px solid whitesmoke;
+            margin-bottom: 0%;
+            color: white;
+        }
+
+        /* .dropdown {
+            position: relative;
+            display: inline-block;
+        } */
+
+        .dropdown-content {
+            display: none;
+            background-color: #cb99c9;
+            width: 100%;
+            z-index: 2;
+            margin-top: 0%;
+            padding: 3%;
+        }
+
+
+        /* .dropdown:hover #p1{
+            border-bottom: 5px solid black;
+            
+        } */
+        #op1 p,
+        #op2 p,
+        #op3 p,
+        #op4 p,
+        #op5 p {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 2%;
+            cursor: pointer;
+        }
+
+        #op1 p:hover,#op2 p:hover,#op3 p:hover,#op4 p:hover,#op5 p:hover {
+            background-color: #9e509b;
+        }
+
+        #p1:hover,#p2:hover,#p3:hover,#p4:hover,#p5:hover {
+            border-bottom: 5px solid black;
+        }
+
+        #change div div {
+            padding: 2%;
+        }
+
+        #change div div p {
+            padding-top: 15px;
+        }
+
+        #change div div span {
+            padding-top: 30px;
+        }
+
+        #change div div p:hover {
+            background-color: #6a3668;
+            color: white;
+            cursor: pointer;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            display: inline-block;
+            padding-top: 15px;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            cursor: pointer;
+            background: #cb99c9;
+            border-radius: 5px;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            border-radius: 5px;
+            background: #FFFFFF;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="newfile.html">Back to home</a>
+                </li>
+
+
+        </div>
+    </nav>
+    <div class="container" onmouseenter="head1()" >
+        <br>
+        <div style="text-align: center;" >
+            <h1>Explore Our Wide Range of Products</h1>
+        </div>
+    </div>
+    <br>
+    <div class="container-fluid" id="cont">
+        <div class="dropdown">
+            <p id="p1" onmouseover="fi()">Smart Phones</p>
+            <p id="p2" onmouseover="fi1()">Smart Watch</p>
+            <p id="p3" onmouseover="fi2()">Laptops</p>
+            <p id="p4" onmouseover="fi3()">Speakers</p>
+            <p id="p5" onmouseover="fi4()">Headphones</p>
+        </div>
+
+
+    </div>
+
+    <div style="clear: both; margin-bottom: 0%;"></div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi()" onmouseout="f2()">
+        <div class="dropdown-content" id="d11">
+            <div class="row">
+                <div class="col-md-6" id="op1">
+                    <p>4G Data Transfer | 6GB RAM</p>
+                    <p>5G Data Transfer | 8GB RAM</p>
+                    <p>Batery Capacity 4000 mAh and more</p>
+                    <p>Octa Core</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://www.cnet.com/a/img/iJxo9AIxiXHqVoqm6nGISKtKwPI=/2020/08/18/b7168aea-9f7e-47bb-9f31-4cb8ad92fbc7/lg-note-20-ultra-5g-iphone-11-se-google-pixel-4a-lg-velvet-6133.jpg"
+                        style="width: 50%; height: auto; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi1()" onmouseout="f22()">
+        <div class="dropdown-content" id="d12">
+            <div class="row">
+                <div class="col-md-6" id="op2">
+                    <p>Trending</p>
+                    <p>Fashionble</p>
+                    <p>46mm dial</p>
+                    <p>GPS Smartwatch</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="http://cdn.shopify.com/s/files/1/0057/8938/4802/products/1bca7fb9-5f5c-42e3-930a-8a430d8a9e60_1200x1200.png?v=1625046257"
+                        style="width: 50%; height: auto; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi2()" onmouseout="f23()">
+        <div class="dropdown-content" id="d13">
+            <div class="row">
+                <div class="col-md-6" id="op3">
+                    <p>Chromebook</p>
+                    <p>Macbook</p>
+                    <p>Convertible</p>
+                    <p>Tablet as a Laptop</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://s.yimg.com/uu/api/res/1.2/NVx3iijOkY6GsTUJNkGIAg--~B/aD0xMjAwO3c9MjAwMDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/os/creatr-uploaded-images/2021-07/7e73d400-df2b-11eb-8b7d-224d93864217.cf.jpg"
+                        style=" height: auto; max-height: 300px; width: auto;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi3()" onmouseout="f24()">
+        <div class="dropdown-content" id="d14">
+            <div class="row">
+                <div class="col-md-6" id="op4">
+                    <p>Subwoofers</p>
+                    <p>soundbars</p>
+                    <p>Loudspeakers</p>
+                    <p>Ceiling/In-wall speakers</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://static.toiimg.com/thumb/msid-83747374,width-1070,height-580,imgsize-184703,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg"
+                        style="width: 50%; height: auto; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="display: block; z-index: 1;" onmouseover="fi4()" onmouseout="f25()">
+        <div class="dropdown-content" id="d15">
+            <div class="row">
+                <div class="col-md-6" id="op5">
+                    <p>Noise Cancelling</p>
+                    <p>Wireless</p>
+                    <p>Bluetooth</p>
+                    <p>Over-ear/Over-head</p>
+
+                </div>
+                <div class="col-md-6" style="text-align: center;">
+                    <img src="https://media.croma.com/image/upload/f_auto,q_auto,d_Croma%20Assets:no-product-image.jpg,h_260,w_260/v1605183501/Croma%20Assets/Entertainment/Headphones%20and%20Earphones/Images/8945035247646.png"
+                        style="width: 50%; height: auto; ">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="container-fluid">
+        <br>
+        <div class="container" id="filters" style="width:20%; height: 100%; float:left; padding-top: 0.5%;">
+            <h3 style="text-align: center;">Filters</h3>
+            <div class="container" style="background-color: white; padding: 2%;">
+                <p>Trending</p>
+                <div class="slider">
+                    <input type="range" min="0" max="1000" onchange="rangevalue1.value=value" style="width: 100%;"
+                        style="background-color: #c4bbc3;" />
+                    <output id="rangevalue1" style="text-align: center;">500</output>
+                </div>
+            </div><br>
+            
+            <div class="container" style="background-color: white; padding: 2%;">
+                <p>User Reviews</p>
+                <div class="slider">
+                    <input type="range" min="0" max="5" onchange="rangevalue.value=value" style="width: 100%;" />
+                    <output id="rangevalue" style="text-align: center;">4</output>
+                </div>
+            </div><br>
+            <div class="container-fluid" style="background-color: white; padding: 2%;">
+                <p>Get delivery within</p>
+                <div class="slider">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Choose ...
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#" onclick="d1()">Within tomorrow</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="d2()">1-2 Days</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="d3()">1 week</a></li>
+                        </ul>
+                    </div>
+                </div><br>
+                <p id="d1">Gold <i class="fa fa-close" onclick="d11()" style="cursor:pointer;"></i></p>
+                <p id="d2">Silver <i class="fa fa-close" onclick="d22()" style="cursor:pointer;"></i></p>
+                <p id="d3">Diamond <i class="fa fa-close" onclick="d33()" style="cursor:pointer;"></i></p>
+            </div><br><br><br><br><br>
+
+        </div>
+
+
+        <div class="container" style="width: 80%; float: right; ">
+
+            <div class="row">
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://www.moneytap.com/images-ns/use_case/mobile_loan_intro.jpg"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 200px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            
+                        </div>
+                    </div><br>
+                </div>
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://t3.ftcdn.net/jpg/00/52/45/32/360_F_52453293_qGCRFdf6nEkCLjBuRIHQIQMOOaYmgNpN.jpg"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 200px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            
+                        </div>
+                    </div><br>
+                </div>
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://images.samsung.com/is/image/samsung/in-full-hd-tv-te50fa-ua43te50fakxxl-frontblack-231881877?$720_576_PNG$"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 200px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            
+                        </div>
+                    </div><br>
+                </div><br>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="http://cdn.mos.cms.futurecdn.net/iCmmEKQHQgTfJr8KBaSthe.jpg"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 180px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            
+                        </div>
+                    </div><br>
+                </div>
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://i.gadgets360cdn.com/products/smart-home/large/1551964771_832_amazon_echo-smart-speaker.jpg"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 180px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            
+                        </div>
+                    </div><br>
+                </div>
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202105/Apple_16-inch_MacBook_Pro_rend.png?OyiPPMec9DLYb7sQFjnkqOKX268VRNMk&size=1200:675"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 180px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            
+                        </div>
+                    </div><br>
+                </div><br>
+
+            </div>
+            <div class="row">
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://i.gadgets360cdn.com/products/headphones-and-headsets/large/boat-rockerz-400-wireless-headphone-832X558-1598367902.jpg"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 180px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            
+                        </div>
+                    </div><br>
+                </div>
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://www.theburnin.com/wp-content/uploads/2019/10/maxresdefault-38.jpg"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 180px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            
+                        </div>
+                    </div><br>
+                </div>
+                <div class="col-md-4" onclick="myfunc()">
+                    <div class="card" style="width: 17rem;">
+                        <img src="https://www.sony.co.in/image/276ac93ad526573950eb08f98721822f?fmt=pjpeg&bgcolor=FFFFFF&bgc=FFFFFF&wid=2515&hei=1320"
+                            class="card-img-top" style="max-width: 400px; height: auto; max-height: 180px;">
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Blog title</h5> -->
+                            
+                        </div>
+                    </div><br>
+                </div><br>
+
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="container" style="max-width: 900px; height:100px; text-align: center" id="change">
+        <div class="row">
+            <div class="col-2" id="curr">
+                <p>1</p>
+            </div>
+            <div class="col-2">
+                <p>2</p>
+            </div>
+            <div class="col-2">
+                <p>3</p>
+            </div>
+            <div class="col-2">
+                <p>4</p>
+            </div>
+            <div class="col-2">
+                <p>...</p>
+            </div>
+            <div class="col-2">
+                <p>10</p>
+            </div>
+        </div>
+    </div><br>
+    <script language="javascript" type="text/javascript">
+        var x = document.getElementById("d1");
+        var y = document.getElementById("d2");
+        var z = document.getElementById("d3");
+        x.style.display = 'none'
+        y.style.display = 'none'
+        z.style.display = 'none'
+        function myfunc() {
+            window.open("#", "_blank");
+        }
+        function d1() {
+            x.style.display = 'block'
+        }
+        function d2() {
+            y.style.display = 'block'
+        }
+        function d3() {
+            z.style.display = 'block'
+        }
+        function d11() {
+            x.style.display = 'none'
+        }
+        function d22() {
+            y.style.display = 'none'
+        }
+        function d33() {
+            z.style.display = 'none'
+        }
+
+        var x1 = document.getElementById("d11")
+        
+        var x2 = document.getElementById("d12")
+        
+        var x3 = document.getElementById("d13")
+        
+        var x4 = document.getElementById("d14")
+        
+        var x5 = document.getElementById("d15")
+        
+
+        x1.style.display = "none"
+        x2.style.display = "none"
+        x3.style.display = "none"
+        x4.style.display = "none"
+        x5.style.display = "none"
+        function fi() {
+            x1.style.display = 'block'
+            x2.style.display = "none"
+            x3.style.display = "none"
+            x4.style.display = "none"
+            x5.style.display = "none"
+
+        }
+        function f2() {
+            x1.style.display = 'none'
+
+        }
+
+        function fi1() {
+            x2.style.display = 'block'
+            x1.style.display = "none"
+            x3.style.display = "none"
+            x4.style.display = "none"
+            x5.style.display = "none"
+
+        }
+        function f22() {
+            x2.style.display = 'none'
+        }
+
+        function fi2() {
+            x3.style.display = 'block'
+            x1.style.display = "none"
+            x2.style.display = "none"
+            x4.style.display = "none"
+            x5.style.display = "none"
+
+        }
+        function f23() {
+            x3.style.display = 'none'
+        }
+
+        function fi3() {
+            x4.style.display = 'block'
+            x1.style.display = "none"
+            x2.style.display = "none"
+            x3.style.display = "none"
+            x5.style.display = "none"
+
+        }
+        function f24() {
+            x4.style.display = 'none'
+        }
+
+        function fi4() {
+            x5.style.display = 'block'
+            x1.style.display = "none"
+            x2.style.display = "none"
+            x3.style.display = "none"
+            x4.style.display = "none"
+
+        }
+        function f25() {
+            x5.style.display = 'none'
+        }
+        function head1() {
+            x5.style.display = 'none'
+            x1.style.display = "none"
+            x2.style.display = "none"
+            x3.style.display = "none"
+            x4.style.display = "none"
+
+        }
+        
+    </script>
+</body>
+
+</html>

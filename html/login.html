@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <img src="signup/LoginTemp1.png" class="image" width="30%">
+ 
+    <!--CAROUSEL-->
+    <div class="carousel">
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <div class="slide first">
+            <img src="Login/camera.png" class="cam">
+          </div>
+          <div class="slide">
+            <img src="Login/iphone.png" class="mob">
+          </div>
+          <div class="slide">
+            <img src="Login/tv.png" class="air">
+          </div>
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+        </div>
+        <!--MANUAL CAROUSEL
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label> 
+              <label for="radio2" class="manual-btn"></label> 
+              <label for="radio3" class="manual-btn"></label> 
+            </div>-->
+      </div>
+    </div>
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function () {
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if (counter > 3) {
+          counter = 1;
+        }
+
+      }, 3000)
+
+
+    </script>
+    <!---->
+
+
+
+
+    <div class="bg">
+
+      <section class="panel">
+        <h2>Login</h2>
+        <div class="card__text">
+
+          <form class="form1" method="post" name="login">
+
+            <input type="text" class="two-input" name="username" placeholder="Username" autofocus="true" />
+            <input type="password" class="two-input" name="password" placeholder="Password" />
+
+            <p class="link"><a href="signup.html">New Registration</a></p>
+            <a href="newfile.html">GO TO DASHBOARD</a>
+          </form>
+        </div>
+        <a href="login.php" class='button'>LOGIN</a>
+      </section>
+
+    </div>
+
+
+  </header>
+
+
+</body>
+
+</html>

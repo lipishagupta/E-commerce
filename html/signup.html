@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="signup.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+  <header>
+    <img src="signup/LoginTemp1.png" class="image" width="30%">
+    <!--CAROUSEL-->
+    <div class="carousel">
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <div class="slide first">
+            <img src="signup/headphones.png">
+          </div>
+          <div class="slide">
+            <img src="signup/mobilephone.png" class="mob">
+          </div>
+          <div class="slide">
+            <img src="signup/watch.png" class="air">
+          </div>
+          <div class="navigation-auto">
+            <div class="auto-btn1"></div>
+            <div class="auto-btn2"></div>
+            <div class="auto-btn3"></div>
+          </div>
+        </div>
+        <!--MANUAL CAROUSEL
+            <div class="navigation-manual">
+              <label for="radio1" class="manual-btn"></label> 
+              <label for="radio2" class="manual-btn"></label> 
+              <label for="radio3" class="manual-btn"></label> 
+            </div>-->
+      </div>
+    </div>
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function () {
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if (counter > 3) {
+          counter = 1;
+        }
+
+      }, 3000)
+
+
+    </script>
+    <!---->
+
+
+
+
+    <div class="bg">
+      <section class="panel">
+        <h2>Sign Up</h2>
+        <div class="card__text">
+
+          <form class="form" action="" method="post">
+            <label for="html">User Name</label>
+            <input type="text" class="login-input" name="username" placeholder="Username" onclick="Function1()" />
+            <label for="html">Email Address</label>
+            <input type="text" class="login-input" name="email" placeholder="Email Address" onclick="Function2()">
+            <label for="html">Password</label>
+            <input type="password" class="login-input" name="password" placeholder="Password" onclick="Function3()">
+            <!--<input type="submit" name="submit" value="Register" class="login-button">-->
+            <p class="link"><a href="login.html">Already have an account? Login</a></p>
+            <a href="newfile.html">GO TO DASHBOARD</a>
+          </form>
+        </div>
+        <a href="signup.html" class='button'>REGISTER</a>
+      </section>
+
+    </div>
+
+
+  </header>
+
+
+</body>
+
+</html>
